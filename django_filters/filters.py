@@ -115,10 +115,6 @@ class TypedChoiceFilter(Filter):
     field_class = forms.TypedChoiceField
 
 
-class UUIDFilter(Filter):
-    field_class = forms.UUIDField
-
-
 class MultipleChoiceFilter(Filter):
     """
     This filter preforms OR(by default) or AND(using conjoined=True) query

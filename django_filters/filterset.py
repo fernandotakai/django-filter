@@ -19,7 +19,7 @@ from django.utils.translation import ugettext as _
 from .compat import remote_field, remote_model
 from .filters import (Filter, CharFilter, BooleanFilter,
                       ChoiceFilter, DateFilter, DateTimeFilter, TimeFilter, ModelChoiceFilter,
-                      ModelMultipleChoiceFilter, NumberFilter, UUIDFilter)
+                      ModelMultipleChoiceFilter, NumberFilter)
 
 
 ORDER_BY_FIELD = 'o'
@@ -271,9 +271,6 @@ FILTER_FOR_DBFIELD_DEFAULTS = {
     },
     models.CommaSeparatedIntegerField: {
         'filter_class': CharFilter,
-    },
-    models.UUIDField: {
-        'filter_class': UUIDFilter,
     },
 }
 
